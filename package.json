@@ -1,0 +1,63 @@
+{
+  "name": "@jamesbliss/react-spy",
+  "version": "0.0.1",
+  "description": "Scroll spy in react",
+  "main": "./dist/modules/index.js",
+  "scripts": {
+    "bundle-dist": "webpack --config webpack.js",
+    "bundle-modules": "rm -rf dist/modules/ && babel src --loose --out-dir dist/modules",
+    "bundle": "npm run bundle-dist && npm run bundle-modules",
+    "demo": "start-storybook -p 6008",
+    "storybook": "start-storybook -p 6008",
+    "build-storybook": "build-storybook",
+    "lint": "eslint ./src",
+    "test": "npm run lint && mocha -R spec --compilers jsx:test/compiler.js ./src/*Test.jsx",
+    "gp-storybook": "build-storybook -s public -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "author": "James Bliss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamesBliss/react-spy.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addon-options": "^3.2.6",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "node-sass": "^4.5.3",
+    "prop-types": "^15.5.10",
+    "raw-loader": "^0.5.1",
+    "react": "^15.5.4",
+    "react-content-loader": "^1.3.1",
+    "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.6",
+    "yarn": "1.0.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
+    "@storybook/react": "^3.2.8",
+    "@storybook/storybook-deployer": "^2.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "classnames": "2.1.5",
+    "eslint": "^3.10.1",
+    "mocha": "2.3.3",
+    "react-addons-test-utils": "0.14.2",
+    "sinon": "1.17.1",
+    "trash": "3.1.2",
+    "unexpected": "10.0.2",
+    "unexpected-sinon": "8.0.0",
+    "webpack": "^2.6.1"
+  }
+}
